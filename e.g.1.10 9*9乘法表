@@ -1,0 +1,12 @@
+my code
+#99乘法表
+for i in range(1, 10):
+    for j in range(1, i+1):
+        print("{}*{}={:2}".format(i, j, i*j), end ='')
+print('') #错误，循环嵌套内容错误，在一行循环完成后就需换行，不是所有循环完成后换行
+
+#stand code
+for i in range(1,10):
+    for j in range(1,i+1):
+        print("{}*{}={:2} ".format(j,i,i*j), end='')
+    print('')
