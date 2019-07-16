@@ -1,0 +1,10 @@
+#温度转换，T and F，加入循环
+TempStr = input("请输入温度值：（请以数字+F或者数字+C结尾）")
+while TempStr[-1] not in ['N','n']: ##错误，while小写即可，如果大写会出错
+    if TempStr[-1] in ["C", "c"]:
+        print("转换输出后的温度是{:.3f}F".format(1.8*eval(TempStr[0:-1])+32))
+    elif TempStr[-1] in ["f", "F"]:
+        print("转换输出后的温度是{:.3f}C".format((eval(TempStr[0:-1])-32)/1.8))
+    else:  ##保证错误的时候能够也有输出或者提醒
+        print("输入错误，请重新输入或当输入N或者n退出")
+    TempStr = input("请输入温度值：（请以数字+F或者数字+C结尾）") #如果不加此条件，会陷入无限循环中；加入该条件，可以重新开始进行判断
