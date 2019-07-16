@@ -1,0 +1,8 @@
+#温度转换，T and F
+TempStr = input("请输入温度值：（请以数字+F或者数字+C结尾）")
+if TempStr[-1] in ["C", "c"]:
+    print("转换输出后的温度是{:.3f}F".format(1.8*eval(TempStr[0:-1])+32))
+elif TempStr[-1] in ["f", "F"]:
+    print("转换输出后的温度是{:.3f}C".format((eval(TempStr[0:-1])-32)/1.8)) #错误，刚开始为.format(eval(TempStr[0:-1])-32)/1.8)，少了不分括号，没有搞清逻辑关系，然后可通过点击左侧括号，右侧会显示相对应的括号，从而检查
+else:
+    print("输入错误，请重新输入")
