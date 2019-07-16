@@ -1,0 +1,12 @@
+#定义函数
+def tempConvert(ValueStr):
+    #温度转换，T and F
+   
+    if TempStr[-1] in ["C", "c"]:
+        print("转换输出后的温度是{:.3f}F".format(1.8*eval(TempStr[0:-1])+32))
+    elif TempStr[-1] in ["f", "F"]:
+        print("转换输出后的温度是{:.3f}C".format((eval(TempStr[0:-1])-32)/1.8))
+    else:
+        print("输入错误，请重新输入")
+TempStr = input("请输入温度值：（请以数字+F或者数字+C结尾）")
+tempConvert(TempStr)
