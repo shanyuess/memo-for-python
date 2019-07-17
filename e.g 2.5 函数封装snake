@@ -1,0 +1,20 @@
+#函数封装snake
+from turtle import *
+def drawSnake(radius, angle, length):
+    seth(-40)
+    for i in range(length):
+        circle(40, 80)
+        circle(-40, 80)
+    seth(angle/2)
+    fd(100)
+    circle(40, 40)
+    fd(200)
+
+setup(800, 800, 200, 200)
+penup()
+fd(-250)
+pendown()
+pensize(2)
+pencolor("red")
+drawSnake(20, 20, 4)
+done()
