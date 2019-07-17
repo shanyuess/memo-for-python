@@ -3,6 +3,7 @@ from turtle import *
 setup(650, 350, 200, 200)
 penup()
 fd(-250)
+            ##该行少了pendown()
 pensize(25)
 seth(-40)
 for i in range(4):
@@ -13,4 +14,4 @@ fd(40)
 circle(16, 180)
 fd(40 * 2/3)
 
-存在问题，绘图没有显示黑线
+存在问题，绘图没有显示黑线，原因是有penup()没有pendown()
