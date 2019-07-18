@@ -1,0 +1,14 @@
+#刷新时间进度条
+import time
+scale = 50
+print("开始执行".center(scale//2, '-')) ##.center()，表示字符串居中，另外，表示时间进度条是什么样子的
+t = time.clock() ##统计CPU在改程序上实际话费的时间
+for i in range(scale+1):
+    a = "--"*i
+    b = "**"*(scale - i)
+    c = (i/scale)*100
+    t-= time.clock()
+    print("\r{:.3f}%[{}->{}{:.5f}s]".format(c, a, b, -t), end= '') #表示不换行，开头重新刷新时间的表示方法
+    time.sleep(0.1) #执行上述程序后停顿的时间
+
+print('\n'+"执行结束".center(scale//2, '-'))
