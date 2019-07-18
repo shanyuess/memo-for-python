@@ -1,0 +1,5 @@
+#不换行时间进度条
+import time
+for i in range(101):
+    print("\r{:.2f}%".format(i), end = '') ##\r表示不换行，指针重新回到开头，重新刷新，end =''，表示每个字符以空格结尾
+    time.sleep(0.1)
