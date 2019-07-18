@@ -8,3 +8,15 @@ for i in range(scale + 1): ##拼写错误，scale
     print("%{:.3f}[{}->{}]".format(c, a, b)) ##如何表示居中的关系等？
     time.sleep(0.1) ##作用？
 print("-----down-----")
+
+#不换行进度条
+#时间进度条调整
+import time
+scale = 30
+print("-----star-----")
+for i in range(scale + 1):
+    a, b ='-'*i, '*'*(scale -i)
+    c = (i/scale)*100
+    print("\r%{:.3f}[{}->{}]".format(c, a, b))
+    time.sleep(0.5)
+print("-----down-----")
