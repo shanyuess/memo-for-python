@@ -1,0 +1,12 @@
+#天天向上，周末堕落
+dayup, dayfactor = 1.0, 0.01
+for i in range(365):
+    if i % 7 in [6, 0]:
+        dayup *= (1-dayfactor)
+    else:
+        dayup *= (1+dayfactor)
+print("dayup  is {}".format(dayup)) ##错误，最右侧少了反括号
+
+提示错误：print("dayup  is {}".format(dayup)
+                                     ^
+SyntaxError: unexpected EOF while parsing
