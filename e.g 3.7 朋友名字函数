@@ -1,0 +1,7 @@
+#朋友名字密文
+plaincode = input("请输入朋友的名字（英文）：")
+for p in plaincode: ##错误，字符的遍历只需要for in函数即可
+    if "a" < p <"z":
+        print(chr(ord("a")+(ord("p") + ord("a") +3)%27), end ='') ##英文字母进行运算需要通过ord和chr进行逆运算
+    else:
+        print(p, end ='')
