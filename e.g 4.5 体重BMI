@@ -1,0 +1,19 @@
+#BMI测试分区
+height, weight = eval(input("请输入身高和体重值[用逗号隔开]:")) ##错误，区分Input（）函数的得到值为字符类型，需要转换为整数型数值才能进一步运用；错误为漏掉eval()
+BMI = weight/ pow(weight, 2)
+print("BMI值是：{:.2f}".format(BMI))
+who, dom = "", ""
+if BMI < 18.5:
+    who, dom = "偏瘦", "偏瘦"
+elif BMI < 24:
+    who, dom = "正常", "正常"
+elif BMI < 25:
+    who, dom = "正常", "偏胖"
+elif BMI <28:
+    who, dom = "偏胖", "偏胖"
+elif BMI <=30:
+    who, dom = "偏胖", "肥胖"
+else:
+    who, dom = "肥胖", "肥胖"
+
+print("BMI指标为国标'{0}'，国内'{1}'".format(who, dom)) ##检查相关字符串的一致性，这里dom错误写为BMI，因此错误，需要针对性地与上面保持一致
